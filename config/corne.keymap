@@ -40,8 +40,8 @@
 
             bindings = <
 &kp ESCAPE  &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB     &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&kp TAB     &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp LEFT_BRACKET
+&kp LSHFT   &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
                           &kp LCTRL  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
@@ -54,10 +54,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp BACKSLASH  &kp N1     &kp N2      &kp N3                 &kp N4         &kp N5          &kp N6                     &kp N7          &kp N8           &kp N9  &kp N0            &kp BSPC
-&kp TAB        &kp LA(Q)  &kp LS(N7)  &kp LA(LS(LESS_THAN))  &kp LA(LS(X))  &kp LS(N8)      &kp LS(RIGHT_PARENTHESIS)  &kp UP_ARROW    &kp MINUS        &trans  &trans            &trans
-&kp LSHFT      &kp EXCL   &kp DOLLAR  &kp LS(GREATER_THAN)   &kp LS(N0)     &kp LS(FSLH)    &kp LEFT_ARROW             &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp SINGLE_QUOTE  &kp BACKSLASH
-                                      &kp LGUI               &trans         &kp SPACE       &kp RET                    &trans          &kp RALT
+&kp GRAVE  &kp N1     &kp N2      &kp N3                 &kp N4         &kp N5          &kp N6          &kp N7          &kp N8           &kp N9     &kp N0             &kp DEL
+&kp TAB    &kp LA(Q)  &kp LS(N7)  &kp LA(LS(LESS_THAN))  &kp LA(LS(X))  &kp LS(N8)      &kp LS(N9)      &kp UP_ARROW    &kp MINUS        &kp EQUAL  &kp RIGHT_BRACKET  &kp LEFT_BRACKET
+&kp LSHFT  &kp EXCL   &kp DOLLAR  &kp LS(GREATER_THAN)   &kp LS(N0)     &kp LS(FSLH)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &kp SINGLE_QUOTE   &kp BACKSLASH
+                                  &kp LGUI               &trans         &kp SPACE       &kp RET         &trans          &kp RALT
             >;
         };
 
@@ -78,10 +78,10 @@
 
         adjust_layer {
             bindings = <
-&none      &none      &none         &none   &none   &none     &none   &none   &none   &none    &none    &none
-&kp F1     &kp F2     &kp F3        &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&kp LSHFT  &kp LCTRL  &kp LEFT_ALT  &none   &none   &none     &none   &none   &none   &none    &none    &none
-                                    &trans  &trans  &none     &none   &trans  &trans
+&none      &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none   &none     &none   &none   &kp C_BRI_DEC  &kp C_BRI_INC  &none    &none
+&kp F1     &kp F2     &kp F3             &kp F4           &kp F5  &kp F6    &kp F7  &kp F8  &kp F9         &kp F10        &kp F11  &kp F12
+&kp LSHFT  &kp LCTRL  &kp LEFT_ALT       &none            &none   &none     &none   &none   &none          &none          &none    &none
+                                         &trans           &trans  &none     &none   &trans  &trans
             >;
         };
 
