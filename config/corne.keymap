@@ -19,7 +19,12 @@
 
         toggle_bt_layer {
             bindings = <&tog 4>;
-            key-positions = <35 24>;
+            key-positions = <0 24 5 29>;
+        };
+
+        toggle_adjust {
+            bindings = <&tog 3>;
+            key-positions = <36 41>;
         };
     };
 
@@ -34,10 +39,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT    &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                                &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp ESCAPE  &kp Q  &kp W  &kp E      &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D      &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X  &kp C      &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                          &kp LCTRL  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
@@ -49,10 +54,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp BACKSLASH  &kp N1       &kp N2      &kp N3         &kp N4            &kp N5                  &kp N6                 &kp N7          &kp N8            &kp N9  &kp N0  &kp BSPC
-&kp RSHFT      &kp AT_SIGN  &kp SLASH   &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp UP_ARROW    &kp SINGLE_QUOTE  &trans  &trans  &trans
-&kp RCTRL      &kp EXCL     &kp DOLLAR  &kp COLON      &kp EQUAL         &kp UNDER               &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW   &trans  &trans  &trans
-                                        &kp LGUI       &trans            &kp SPACE               &kp RET                &trans          &kp RALT
+&kp BACKSLASH  &kp N1     &kp N2      &kp N3                 &kp N4         &kp N5          &kp N6                     &kp N7          &kp N8           &kp N9  &kp N0            &kp BSPC
+&kp TAB        &kp LA(Q)  &kp LS(N7)  &kp LA(LS(LESS_THAN))  &kp LA(LS(X))  &kp LS(N8)      &kp LS(RIGHT_PARENTHESIS)  &kp UP_ARROW    &kp MINUS        &trans  &trans            &trans
+&kp LSHFT      &kp EXCL   &kp DOLLAR  &kp LS(GREATER_THAN)   &kp LS(N0)     &kp LS(FSLH)    &kp LEFT_ARROW             &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp SINGLE_QUOTE  &kp BACKSLASH
+                                      &kp LGUI               &trans         &kp SPACE       &kp RET                    &trans          &kp RALT
             >;
         };
 
@@ -64,16 +69,16 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LSHFT  &tog 3    &tog 4  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp ESCAPE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp TAB     &none     &none   &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT   &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                              &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
         adjust_layer {
             bindings = <
-&to 4      &none      &none         &none   &none   &none     &none   &none   &none   &none    &none    &none
+&none      &none      &none         &none   &none   &none     &none   &none   &none   &none    &none    &none
 &kp F1     &kp F2     &kp F3        &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &kp LSHFT  &kp LCTRL  &kp LEFT_ALT  &none   &none   &none     &none   &none   &none   &none    &none    &none
                                     &trans  &trans  &none     &none   &trans  &trans
@@ -82,10 +87,10 @@
 
         bt_layer {
             bindings = <
-&to 4  &none          &none          &none          &none          &none            &none       &none  &none  &none  &none       &bt BT_CLR_ALL
-&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &none       &none  &none  &none  &none       &bt BT_CLR
-&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &none       &none  &none  &none  &sys_reset  &bootloader
-                                     &none          &none          &bt BT_PRV       &bt BT_NXT  &none  &none
+&none  &none  &none  &none  &none  &none         &none       &none  &none  &none  &none  &bt BT_CLR_ALL
+&none  &none  &none  &none  &none  &none         &none       &none  &none  &none  &none  &bt BT_CLR
+&none  &none  &none  &none  &none  &none         &none       &none  &none  &none  &none  &none
+                     &none  &none  &bt BT_PRV    &bt BT_NXT  &none  &none
             >;
         };
     };
