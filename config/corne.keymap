@@ -26,6 +26,11 @@
             bindings = <&tog 3>;
             key-positions = <36 41>;
         };
+
+        lock_screen {
+            bindings = <&kp LG(L)>;
+            key-positions = <0 24 35 11>;
+        };
     };
 
     keymap {
@@ -69,19 +74,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp TAB     &none     &none   &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT   &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                              &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp ESCAPE    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp CAPSLOCK  &none     &none   &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT     &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
         adjust_layer {
             bindings = <
-&none      &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none   &none     &none   &none   &kp C_BRI_DEC  &kp C_BRI_INC  &none    &none
-&kp F1     &kp F2     &kp F3             &kp F4           &kp F5  &kp F6    &kp F7  &kp F8  &kp F9         &kp F10        &kp F11  &kp F12
-&kp LSHFT  &kp LCTRL  &kp LEFT_ALT       &none            &none   &none     &none   &none   &none          &none          &none    &none
-                                         &trans           &trans  &none     &none   &trans  &trans
+&kp LA(LC(T))  &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none   &none     &none   &none   &kp C_BRI_DEC  &kp C_BRI_INC  &none    &none
+&kp F1         &kp F2     &kp F3             &kp F4           &kp F5  &kp F6    &kp F7  &kp F8  &kp F9         &kp F10        &kp F11  &kp F12
+&kp LSHFT      &kp LCTRL  &kp LEFT_ALT       &none            &none   &none     &none   &none   &none          &none          &none    &none
+                                             &trans           &trans  &none     &none   &trans  &trans
             >;
         };
 
